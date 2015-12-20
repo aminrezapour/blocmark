@@ -1,0 +1,15 @@
+<div class="media">
+  <div class="media-body">
+    <h2 class="media-heading">
+
+      <%= link_to topic.title, [topic.user, topic] %>
+
+      <div class="media">
+        <div>
+            <%= render topic.bookmarks %>
+        </div>
+      </div>
+
+    </h2>
+  </div>
+</div>
