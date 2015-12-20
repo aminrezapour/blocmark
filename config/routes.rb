@@ -2,7 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => :registrations }
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :topics, only: [:index, :show, :new, :edit, :create, :update, :destroy]
+  end
+
+  resources :topics, only: [] do
+    resources :bookmarks, only: [:create, :destroy]
+  end
+
 
   get 'about' => 'welcome#about'
 

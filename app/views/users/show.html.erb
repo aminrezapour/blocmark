@@ -20,3 +20,12 @@
   </div>
 
 </div>
+
+<div class="row">
+      <%= link_to "New Topic", new_user_topic_path(current_user), class: 'btn btn-success' %>
+      <%= link_to "All Topics", user_topics_path(current_user), class: 'btn btn-success' %>
+</div>
+
+<div>
+    <%= render @user.topics %>
+</div>

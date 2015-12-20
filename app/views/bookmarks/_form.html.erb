@@ -1,0 +1,11 @@
+<h4>Add a bookmark</h4>
+
+<%= form_for [topic, bookmark] do |f| %>
+  <div class="form-group">
+    <%= f.label :url, class: "sr-only"%>
+    <%= f.text_field :url, class: 'form-control', placeholder: "Enter the url" %>
+  </div>
+
+  <%= f.submit "Submit", class: 'btn btn-default pull-right' %>
+
+<% end %>
