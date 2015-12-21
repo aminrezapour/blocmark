@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :topics, only: [] do
-    resources :bookmarks, only: [:create, :destroy]
+    resources :bookmarks, only: [:create, :destroy, :show, :new, :edit, :update]
   end
 
 
